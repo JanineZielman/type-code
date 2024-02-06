@@ -5,6 +5,7 @@ body{
 .T{
   width: 200px;
   overflow: hidden;
+  // background-color: red;
 }
 
 .T div{
@@ -15,39 +16,55 @@ body{
 .T div{
   height: 3px;
   width: 4000px;
-  background-image: url(Stroke-T-new.svg);
-  animation: mymove 1s infinite linear;
-  // animation-duration: 20s;
+  transform: translateX(0);
+  background-image: url(black-strokes-T.svg);
+  animation: mymove 1s infinite ease alternate;
   background-repeat: no-repeat;
   background-size: 100%;
-  filter: grayscale(1) contrast(2);
+  // filter: grayscale(1) contrast(2);
+  // mix-blend-mode: multiply;
+  position: relative;
+  &::before{
+    content: "";
+    height: 3px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+    left: -50%;
+    top: 0;
+    background-image: url(colors.svg);
+    background-repeat: repeat;
+    background-size: 20%;
+    mix-blend-mode: multiply;
+  }
+}
+
+.T div:nth-child(1n){
+  margin-left: 40px;
 }
 
 .T div:nth-child(1n + 9){
-  margin-left: -250px;
+  margin-left: -220px;
 }
 
 .T div:nth-child(1n + 18){
-  margin-left: -500px;
+  margin-left: -480px;
 }
 
 .T div:nth-child(1n + 40){
-  margin-left: -750px;
+  margin-left: -740px;
 }
 
-@for $i from 1 through 25 {
-  .T div:nth-child(1n + #{$i * random(5)}) {
-    animation-delay: 0.01s * $i ;
+@for $i from 1 through 50 {
+  .T div:nth-child(2n + #{$i}) {
+    animation-delay: 0.1s * $i ;
   }
-  .T div:nth-child(1n + #{$i * random(5)}) {
-    animation-delay: -0.01s * $i ;
+  .T div:nth-child(2n + #{$i + 1}) {
+    animation-delay: -0.1s * $i ;
   }
-  // .T div:nth-child(1n + #{$i * 2}) {
-  //   animation-delay: -0.04s * $i ;
-  // }
 }
 
 @keyframes mymove {
-  0% {transform: translateX(0);}
-  100% {transform: translateX(-50px);}
+  0% {transform: translateX(0)}
+  100% {transform: translateX(-20px)}
 }

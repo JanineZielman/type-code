@@ -14,223 +14,441 @@ body {
 .T div {
   height: 3px;
   width: 4000px;
-  background-image: url(Stroke-T-new.svg);
-  animation: mymove 1s infinite linear;
+  transform: translateX(0);
+  background-image: url(black-strokes-T.svg);
+  animation: mymove 1s infinite ease alternate;
   background-repeat: no-repeat;
   background-size: 100%;
-  filter: grayscale(1) contrast(2);
+  position: relative;
+}
+.T div::before {
+  content: "";
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  left: -50%;
+  top: 0;
+  background-image: url(colors.svg);
+  background-repeat: repeat;
+  background-size: 20%;
+  mix-blend-mode: multiply;
+}
+
+.T div:nth-child(1n) {
+  margin-left: 40px;
 }
 
 .T div:nth-child(1n+9) {
-  margin-left: -250px;
+  margin-left: -220px;
 }
 
 .T div:nth-child(1n+18) {
-  margin-left: -500px;
+  margin-left: -480px;
 }
 
 .T div:nth-child(1n+40) {
-  margin-left: -750px;
+  margin-left: -740px;
 }
 
-.T div:nth-child(1n+3) {
-  animation-delay: 0.01s;
-}
-
-.T div:nth-child(1n+1) {
-  animation-delay: -0.01s;
-}
-
-.T div:nth-child(1n+10) {
-  animation-delay: 0.02s;
-}
-
-.T div:nth-child(1n+4) {
-  animation-delay: -0.02s;
-}
-
-.T div:nth-child(1n+9) {
-  animation-delay: 0.03s;
-}
-
-.T div:nth-child(1n+12) {
-  animation-delay: -0.03s;
-}
-
-.T div:nth-child(1n+4) {
-  animation-delay: 0.04s;
-}
-
-.T div:nth-child(1n+20) {
-  animation-delay: -0.04s;
-}
-
-.T div:nth-child(1n+15) {
-  animation-delay: 0.05s;
-}
-
-.T div:nth-child(1n+25) {
-  animation-delay: -0.05s;
-}
-
-.T div:nth-child(1n+12) {
-  animation-delay: 0.06s;
-}
-
-.T div:nth-child(1n+30) {
-  animation-delay: -0.06s;
-}
-
-.T div:nth-child(1n+14) {
-  animation-delay: 0.07s;
-}
-
-.T div:nth-child(1n+7) {
-  animation-delay: -0.07s;
-}
-
-.T div:nth-child(1n+32) {
-  animation-delay: 0.08s;
-}
-
-.T div:nth-child(1n+40) {
-  animation-delay: -0.08s;
-}
-
-.T div:nth-child(1n+45) {
-  animation-delay: 0.09s;
-}
-
-.T div:nth-child(1n+9) {
-  animation-delay: -0.09s;
-}
-
-.T div:nth-child(1n+40) {
+.T div:nth-child(2n+1) {
   animation-delay: 0.1s;
 }
 
-.T div:nth-child(1n+20) {
+.T div:nth-child(2n+2) {
   animation-delay: -0.1s;
 }
 
-.T div:nth-child(1n+11) {
-  animation-delay: 0.11s;
-}
-
-.T div:nth-child(1n+22) {
-  animation-delay: -0.11s;
-}
-
-.T div:nth-child(1n+12) {
-  animation-delay: 0.12s;
-}
-
-.T div:nth-child(1n+12) {
-  animation-delay: -0.12s;
-}
-
-.T div:nth-child(1n+26) {
-  animation-delay: 0.13s;
-}
-
-.T div:nth-child(1n+52) {
-  animation-delay: -0.13s;
-}
-
-.T div:nth-child(1n+42) {
-  animation-delay: 0.14s;
-}
-
-.T div:nth-child(1n+70) {
-  animation-delay: -0.14s;
-}
-
-.T div:nth-child(1n+30) {
-  animation-delay: 0.15s;
-}
-
-.T div:nth-child(1n+30) {
-  animation-delay: -0.15s;
-}
-
-.T div:nth-child(1n+16) {
-  animation-delay: 0.16s;
-}
-
-.T div:nth-child(1n+64) {
-  animation-delay: -0.16s;
-}
-
-.T div:nth-child(1n+51) {
-  animation-delay: 0.17s;
-}
-
-.T div:nth-child(1n+17) {
-  animation-delay: -0.17s;
-}
-
-.T div:nth-child(1n+36) {
-  animation-delay: 0.18s;
-}
-
-.T div:nth-child(1n+72) {
-  animation-delay: -0.18s;
-}
-
-.T div:nth-child(1n+57) {
-  animation-delay: 0.19s;
-}
-
-.T div:nth-child(1n+57) {
-  animation-delay: -0.19s;
-}
-
-.T div:nth-child(1n+60) {
+.T div:nth-child(2n+2) {
   animation-delay: 0.2s;
 }
 
-.T div:nth-child(1n+40) {
+.T div:nth-child(2n+3) {
   animation-delay: -0.2s;
 }
 
-.T div:nth-child(1n+84) {
-  animation-delay: 0.21s;
+.T div:nth-child(2n+3) {
+  animation-delay: 0.3s;
 }
 
-.T div:nth-child(1n+21) {
-  animation-delay: -0.21s;
+.T div:nth-child(2n+4) {
+  animation-delay: -0.3s;
 }
 
-.T div:nth-child(1n+66) {
-  animation-delay: 0.22s;
+.T div:nth-child(2n+4) {
+  animation-delay: 0.4s;
 }
 
-.T div:nth-child(1n+66) {
-  animation-delay: -0.22s;
+.T div:nth-child(2n+5) {
+  animation-delay: -0.4s;
 }
 
-.T div:nth-child(1n+69) {
-  animation-delay: 0.23s;
+.T div:nth-child(2n+5) {
+  animation-delay: 0.5s;
 }
 
-.T div:nth-child(1n+46) {
-  animation-delay: -0.23s;
+.T div:nth-child(2n+6) {
+  animation-delay: -0.5s;
 }
 
-.T div:nth-child(1n+72) {
-  animation-delay: 0.24s;
+.T div:nth-child(2n+6) {
+  animation-delay: 0.6s;
 }
 
-.T div:nth-child(1n+120) {
-  animation-delay: -0.24s;
+.T div:nth-child(2n+7) {
+  animation-delay: -0.6s;
 }
 
-.T div:nth-child(1n+50) {
-  animation-delay: 0.25s;
+.T div:nth-child(2n+7) {
+  animation-delay: 0.7s;
 }
 
-.T div:nth-child(1n+50) {
-  animation-delay: -0.25s;
+.T div:nth-child(2n+8) {
+  animation-delay: -0.7s;
+}
+
+.T div:nth-child(2n+8) {
+  animation-delay: 0.8s;
+}
+
+.T div:nth-child(2n+9) {
+  animation-delay: -0.8s;
+}
+
+.T div:nth-child(2n+9) {
+  animation-delay: 0.9s;
+}
+
+.T div:nth-child(2n+10) {
+  animation-delay: -0.9s;
+}
+
+.T div:nth-child(2n+10) {
+  animation-delay: 1s;
+}
+
+.T div:nth-child(2n+11) {
+  animation-delay: -1s;
+}
+
+.T div:nth-child(2n+11) {
+  animation-delay: 1.1s;
+}
+
+.T div:nth-child(2n+12) {
+  animation-delay: -1.1s;
+}
+
+.T div:nth-child(2n+12) {
+  animation-delay: 1.2s;
+}
+
+.T div:nth-child(2n+13) {
+  animation-delay: -1.2s;
+}
+
+.T div:nth-child(2n+13) {
+  animation-delay: 1.3s;
+}
+
+.T div:nth-child(2n+14) {
+  animation-delay: -1.3s;
+}
+
+.T div:nth-child(2n+14) {
+  animation-delay: 1.4s;
+}
+
+.T div:nth-child(2n+15) {
+  animation-delay: -1.4s;
+}
+
+.T div:nth-child(2n+15) {
+  animation-delay: 1.5s;
+}
+
+.T div:nth-child(2n+16) {
+  animation-delay: -1.5s;
+}
+
+.T div:nth-child(2n+16) {
+  animation-delay: 1.6s;
+}
+
+.T div:nth-child(2n+17) {
+  animation-delay: -1.6s;
+}
+
+.T div:nth-child(2n+17) {
+  animation-delay: 1.7s;
+}
+
+.T div:nth-child(2n+18) {
+  animation-delay: -1.7s;
+}
+
+.T div:nth-child(2n+18) {
+  animation-delay: 1.8s;
+}
+
+.T div:nth-child(2n+19) {
+  animation-delay: -1.8s;
+}
+
+.T div:nth-child(2n+19) {
+  animation-delay: 1.9s;
+}
+
+.T div:nth-child(2n+20) {
+  animation-delay: -1.9s;
+}
+
+.T div:nth-child(2n+20) {
+  animation-delay: 2s;
+}
+
+.T div:nth-child(2n+21) {
+  animation-delay: -2s;
+}
+
+.T div:nth-child(2n+21) {
+  animation-delay: 2.1s;
+}
+
+.T div:nth-child(2n+22) {
+  animation-delay: -2.1s;
+}
+
+.T div:nth-child(2n+22) {
+  animation-delay: 2.2s;
+}
+
+.T div:nth-child(2n+23) {
+  animation-delay: -2.2s;
+}
+
+.T div:nth-child(2n+23) {
+  animation-delay: 2.3s;
+}
+
+.T div:nth-child(2n+24) {
+  animation-delay: -2.3s;
+}
+
+.T div:nth-child(2n+24) {
+  animation-delay: 2.4s;
+}
+
+.T div:nth-child(2n+25) {
+  animation-delay: -2.4s;
+}
+
+.T div:nth-child(2n+25) {
+  animation-delay: 2.5s;
+}
+
+.T div:nth-child(2n+26) {
+  animation-delay: -2.5s;
+}
+
+.T div:nth-child(2n+26) {
+  animation-delay: 2.6s;
+}
+
+.T div:nth-child(2n+27) {
+  animation-delay: -2.6s;
+}
+
+.T div:nth-child(2n+27) {
+  animation-delay: 2.7s;
+}
+
+.T div:nth-child(2n+28) {
+  animation-delay: -2.7s;
+}
+
+.T div:nth-child(2n+28) {
+  animation-delay: 2.8s;
+}
+
+.T div:nth-child(2n+29) {
+  animation-delay: -2.8s;
+}
+
+.T div:nth-child(2n+29) {
+  animation-delay: 2.9s;
+}
+
+.T div:nth-child(2n+30) {
+  animation-delay: -2.9s;
+}
+
+.T div:nth-child(2n+30) {
+  animation-delay: 3s;
+}
+
+.T div:nth-child(2n+31) {
+  animation-delay: -3s;
+}
+
+.T div:nth-child(2n+31) {
+  animation-delay: 3.1s;
+}
+
+.T div:nth-child(2n+32) {
+  animation-delay: -3.1s;
+}
+
+.T div:nth-child(2n+32) {
+  animation-delay: 3.2s;
+}
+
+.T div:nth-child(2n+33) {
+  animation-delay: -3.2s;
+}
+
+.T div:nth-child(2n+33) {
+  animation-delay: 3.3s;
+}
+
+.T div:nth-child(2n+34) {
+  animation-delay: -3.3s;
+}
+
+.T div:nth-child(2n+34) {
+  animation-delay: 3.4s;
+}
+
+.T div:nth-child(2n+35) {
+  animation-delay: -3.4s;
+}
+
+.T div:nth-child(2n+35) {
+  animation-delay: 3.5s;
+}
+
+.T div:nth-child(2n+36) {
+  animation-delay: -3.5s;
+}
+
+.T div:nth-child(2n+36) {
+  animation-delay: 3.6s;
+}
+
+.T div:nth-child(2n+37) {
+  animation-delay: -3.6s;
+}
+
+.T div:nth-child(2n+37) {
+  animation-delay: 3.7s;
+}
+
+.T div:nth-child(2n+38) {
+  animation-delay: -3.7s;
+}
+
+.T div:nth-child(2n+38) {
+  animation-delay: 3.8s;
+}
+
+.T div:nth-child(2n+39) {
+  animation-delay: -3.8s;
+}
+
+.T div:nth-child(2n+39) {
+  animation-delay: 3.9s;
+}
+
+.T div:nth-child(2n+40) {
+  animation-delay: -3.9s;
+}
+
+.T div:nth-child(2n+40) {
+  animation-delay: 4s;
+}
+
+.T div:nth-child(2n+41) {
+  animation-delay: -4s;
+}
+
+.T div:nth-child(2n+41) {
+  animation-delay: 4.1s;
+}
+
+.T div:nth-child(2n+42) {
+  animation-delay: -4.1s;
+}
+
+.T div:nth-child(2n+42) {
+  animation-delay: 4.2s;
+}
+
+.T div:nth-child(2n+43) {
+  animation-delay: -4.2s;
+}
+
+.T div:nth-child(2n+43) {
+  animation-delay: 4.3s;
+}
+
+.T div:nth-child(2n+44) {
+  animation-delay: -4.3s;
+}
+
+.T div:nth-child(2n+44) {
+  animation-delay: 4.4s;
+}
+
+.T div:nth-child(2n+45) {
+  animation-delay: -4.4s;
+}
+
+.T div:nth-child(2n+45) {
+  animation-delay: 4.5s;
+}
+
+.T div:nth-child(2n+46) {
+  animation-delay: -4.5s;
+}
+
+.T div:nth-child(2n+46) {
+  animation-delay: 4.6s;
+}
+
+.T div:nth-child(2n+47) {
+  animation-delay: -4.6s;
+}
+
+.T div:nth-child(2n+47) {
+  animation-delay: 4.7s;
+}
+
+.T div:nth-child(2n+48) {
+  animation-delay: -4.7s;
+}
+
+.T div:nth-child(2n+48) {
+  animation-delay: 4.8s;
+}
+
+.T div:nth-child(2n+49) {
+  animation-delay: -4.8s;
+}
+
+.T div:nth-child(2n+49) {
+  animation-delay: 4.9s;
+}
+
+.T div:nth-child(2n+50) {
+  animation-delay: -4.9s;
+}
+
+.T div:nth-child(2n+50) {
+  animation-delay: 5s;
+}
+
+.T div:nth-child(2n+51) {
+  animation-delay: -5s;
 }
 
 @keyframes mymove {
@@ -238,6 +456,6 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50px);
+    transform: translateX(-20px);
   }
 }/*# sourceMappingURL=style.css.map */
