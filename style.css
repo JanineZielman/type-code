@@ -16,7 +16,7 @@ body {
   width: 4000px;
   transform: translateX(0);
   background-image: url(black-strokes-T.svg);
-  animation: mymove 1s infinite ease alternate;
+  animation: mymove 0.3s infinite ease alternate;
   background-repeat: no-repeat;
   background-size: 100%;
   position: relative;
@@ -29,9 +29,8 @@ body {
   z-index: -1;
   left: -50%;
   top: 0;
-  background-image: url(colors.svg);
   background-repeat: repeat;
-  background-size: 20%;
+  background-size: 4%;
   mix-blend-mode: multiply;
 }
 
@@ -456,6 +455,6 @@ body {
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-20px);
+    transform: translateX(-50px);
   }
 }/*# sourceMappingURL=style.css.map */

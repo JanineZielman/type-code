@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+}
+
+.T{
+  // width: 200px;
+  overflow: hidden;
+  // background-color: red;
+}
+
+
+.T img{
+  width: 20000px;
+  height: 50px;
+  object-fit: cover;
+  transform: translateX(0);
+  margin-bottom: -4px;
+}
+
+.T img:nth-child(1){
+  margin-left: 0;
+  height: 100px;
+}
+
+.T img:nth-child(2){
+  margin-left: -1246px;
+  height: 100px;
+}
+
+.T img:nth-child(3){
+  margin-left: -2492px;
+  height: 350px;
+}
+
+.T img:nth-child(4){
+  margin-left: -3735px;
+  height: 100px;
+}
+
+
+// @for $i from 1 through 50 {
+//   .T div:nth-child(2n + #{$i}) {
+//     animation-delay: 0.1s * $i ;
+//   }
+//   .T div:nth-child(2n + #{$i + 1}) {
+//     animation-delay: -0.1s * $i ;
+//   }
+// }
+
+@keyframes mymove {
+  0% {transform: translateX(0)}
+  100% {transform: translateX(-50px)}
+}

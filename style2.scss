@@ -1,0 +1,64 @@
+body{
+  margin: 0;
+  background-color: black;
+}
+
+.T{
+  width: 120px;
+  overflow: hidden;
+  // background-color: red;
+  // border: 1px solid red;
+}
+
+.T div{
+  height: 2px;
+  width: 350%;
+  transform: translateX(0);
+  animation: mymove 3s infinite ease ;
+  background-repeat: repeat-x;
+  background-size: 100%;
+  // mix-blend-mode: multiply;
+  position: relative;
+  margin-left: -60px;
+  filter: invert(1)
+}
+
+.T .part-1{
+  background-image: url(part-1-T.svg);
+}
+
+.T .part-2{
+  background-image: url(part-2-T.svg);
+}
+
+.T .part-3{
+  background-image: url(part-3-T.svg);
+}
+
+.T .part-4{
+  background-image: url(part-4-T.svg);
+}
+
+@for $i from 1 through 60 {
+  .T div:nth-child(2n + #{$i}) {
+    animation-delay: 0.05s * $i ;
+  }
+  .T div:nth-child(2n + #{$i + 1}) {
+    animation-delay: -0.05s * $i ;
+  }
+  // .T div:nth-child(1n + #{$i}) {
+  //   animation-delay: 0.01s * $i ;
+  // }
+}
+
+// @keyframes mymove {
+//   0% {transform: translateX(0)}
+//   100% {transform: translateX(-100%)}
+// }
+
+
+@keyframes mymove {
+  0% {margin-left: -60px;}
+  80% {margin-left: -240px;}
+  100% {margin-left: -240px;}
+}

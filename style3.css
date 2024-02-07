@@ -1,0 +1,45 @@
+body {
+  margin: 0;
+}
+
+.T {
+  overflow: hidden;
+}
+
+.T img {
+  width: 20000px;
+  height: 50px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transform: translateX(0);
+  margin-bottom: -4px;
+}
+
+.T img:nth-child(1) {
+  margin-left: 0;
+  height: 100px;
+}
+
+.T img:nth-child(2) {
+  margin-left: -1246px;
+  height: 100px;
+}
+
+.T img:nth-child(3) {
+  margin-left: -2492px;
+  height: 350px;
+}
+
+.T img:nth-child(4) {
+  margin-left: -3735px;
+  height: 100px;
+}
+
+@keyframes mymove {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50px);
+  }
+}/*# sourceMappingURL=style3.css.map */
